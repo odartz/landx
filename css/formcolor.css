@@ -1,0 +1,21 @@
+.colored-line {
+  background: #f25454;
+}
+.vertical-registration-form .input-box {
+  border-top: 1px solid rgba(242, 84, 84, 0.4);
+  border-bottom: 1px solid rgba(242, 84, 84, 0.4);
+  border-right: 1px solid rgba(242, 84, 84, 0.4);
+  border-left: 3px solid #f25454;
+}
+.vertical-registration-form .input-box:focus,
+.vertical-registration-form .input-box:active {
+  border-color: #f25454;
+}
+.standard-button {
+  background: #f25454;
+  color: #ffffff;
+}
+.standard-button:hover {
+  color: #ffffff;
+  background: #e64646;
+}
