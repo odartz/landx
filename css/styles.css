@@ -4,14 +4,72 @@ LandX - Responsive App Landing Page
 Version: 1.0 (Initial Release)
 Designed By: Mizanur Rahman
 =========================================
+
+1. IMPORT CSS
+
+2. GLOBAL STYLES (USED IN VARIOUS SECTION OF THE WEBSITE)
+	2.1 GENERAL STYLES
+	2.2 PRE LOADER
+	2.3 ANCHOR AND BOLD TEXT  
+
+3. COMPONENTS (ELEMNTS USED IN MANY SECTION)
+	3.1 BACKGROUND COLORS AND LINE
+	3.2 TYPOGRAPHY
+	3.3 BUTTONS
+
+4. SECTION STYLES AND COMPONENTS
+	4.1 SECTIONS PADDING AND COLOR OVERLAY
+
+	4.2 SECTION: HOME
+		4.2.1 BASIC STYLES
+		4.2.2 NAVIGATION 
+
+	4.3 SECTION: WITH LEFT / RIGHT SCREENSHOT
+		4.3.1 BASIC STYLES   
+		4.3.2 FEATURE LIST    
+
+	4.4 SECTION: FEATURES 
+
+	4.5 SECTION: PRICING TABLE 
+
+	4.6 SECTION: VIDEO   
+		4.6.1 BASIC STYLE / RESET
+		4.6.2 VIDEO FEATURES 
+
+	4.7 SECTION: SCREENSHOTS 
+	
+	4.8 SECTION: CLIENTS AND FEEDBACKS
+		4.8.1 CLIENTS LOGO 
+		4.8.2 FEEDBACKS
+
+	4.9 SECTION: CALL TO ACTION
+		4.9.1 CALL TO ACTION WITH TEXT/BUTTON 
+		4.9.2 SUBSCRIBE FORM 
+
+	4.10 SECTION: CONTACT US
+		4.10.1 BASIC STYLES
+		4.10.2 CONTACT FORM 
+
+	4.11 SECTION: FOOTER   
+
 -----------------------------------------*/
+
+/*---------------------------------------
+   1. IMPORT GOOGLE WEB FONTS                
+-----------------------------------------*/
+
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Raleway:500,600,700);
 
 /* --------------------------------------
 =========================================
-GLOBAL STYLES
+   2. GLOBAL STYLES
 =========================================
 -----------------------------------------*/
+
+/*---------------------------------------
+   2.1 GENERAL STYLES                
+-----------------------------------------*/
+
 html {
 	font-size: 100%;
 }
@@ -27,7 +85,9 @@ body {
 	margin: auto !important;
 }
 
-/* PRE LOADER */
+/*---------------------------------------
+   2.2 PRE LOADER              
+-----------------------------------------*/
 .preloader {
 	position: fixed;
 	top: 0;
@@ -55,7 +115,9 @@ body {
 	margin: -20px 0 0 -20px;
 }
 
-/* DEFAULT HYPERLINK / HOVER */
+/*---------------------------------------
+   2.3 ANCHOR AND BOLD TEXT           
+-----------------------------------------*/
 a {
 	text-decoration: none;
 	-webkit-transition: all ease 0.25s;
@@ -66,6 +128,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+a:focus {
+	outline: inherit;
+	color: inherit;
+}
+
 strong {
 	font-weight: 700;
 }
@@ -74,7 +141,10 @@ strong {
 	font-weight: 700;
 }
 
-/* IE10 IN WINDOWS 8 AND WINDOWS PHONE 8 BUG FIX FOR BOOTSTRAP */
+
+/*---------------------------------------
+   2.4 MISC FIXES         
+-----------------------------------------*/
 @-webkit-viewport {
 	width: device-width;
 }
@@ -95,20 +165,6 @@ strong {
 	width: device-width;
 }
 
-/* OTHER FIXES */
-a:focus {
-	outline: inherit;
-	color: inherit;
-}
-
-.btn:focus,
-.btn:active,
-.btn,
-.open .dropdown-toggle.btn {
-	outline: inherit;
-	border-color: inherit;
-}
-
 *,
 *:before,
 *:after {
@@ -125,11 +181,17 @@ ol {
 li {
 	list-style: none;
 }
+
 /* --------------------------------------
 =========================================
-   COMPONENTS 
+   3. COMPONENTS 
 =========================================
 -----------------------------------------*/
+
+/*---------------------------------------
+   3.1 BACKGROUND COLORS AND LINE               
+-----------------------------------------*/
+
 .dark-bg {
 	background: #323232;
 	color: #ffffff;
@@ -157,7 +219,7 @@ li {
 
 
 /*---------------------------------------
-   Typography                
+   3.2 TYPOGRAPHY               
 -----------------------------------------*/
 h1,
 h2,
@@ -209,8 +271,16 @@ h6 {
 
 
 /*---------------------------------------
-   BUTTONS               
+   3.3 BUTTONS               
 -----------------------------------------*/
+.btn:focus,
+.btn:active,
+.btn,
+.open .dropdown-toggle.btn {
+	outline: inherit;
+	border-color: inherit;
+}
+
 .standard-button {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
@@ -245,9 +315,14 @@ h6 {
 
 /* --------------------------------------
 =========================================
-   SECTION SPECIFIC CSS
+   4. SECTION SPECIFIC CSS
 =========================================
 -----------------------------------------*/
+
+/*---------------------------------------
+   4.1 SECTIONS PADDING AND COLOR OVERLAY                
+-----------------------------------------*/
+
 .section1,
 .section2,
 .section3,
@@ -264,8 +339,12 @@ h6 {
 }
 
 
+/*========================================
+   4.2 SECTION: HOME                
+==========================================*/
+
 /*---------------------------------------
-   HEADER / HOME                
+   4.2.1 BASIC STYLES               
 -----------------------------------------*/
 header {
 	background: url(../images/bg-image-1.jpg) no-repeat center top fixed;
@@ -284,7 +363,27 @@ header .vertical-registration-form {
 
 .intro-section {
 	margin-top: 50px;
-	margin-bottom: 137px;
+}
+
+.intro-section .sub-heading {
+    font-size: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+    color: #ffffff;
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+.sf-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin-bottom: 137px;
+    margin-top: 50px;
+}
+
+.sf-container .input-box,
+.sf-container button {
+    margin: 10px;
 }
 
 .intro {
@@ -297,7 +396,7 @@ header .vertical-registration-form {
 
 
 /*---------------------------------------
-   Navigation                
+   4.2.2 NAVIGATION                
 -----------------------------------------*/
 /* NAV RESETS */
 .navbar-nav > li > a:hover {
@@ -316,6 +415,7 @@ header .vertical-registration-form {
 	padding-top: 3px;
 	color: #ffffff;
 }
+
 
 /* STICKY NAVIGATION */
 .sticky-navigation {
@@ -350,84 +450,11 @@ header .vertical-registration-form {
 }
 
 
+/*========================================
+   4.3 SECTION WITH LEFT / RIGHT SCREENSHOT             
+==========================================*/
 /*---------------------------------------
-   FEATURE LIST 1               
------------------------------------------*/
-.feature-list-1 {
-	margin-top: 40px;
-	margin-bottom: 20px;
-}
-
-.feature-list-1 li {
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
-.feature-list-1 li .icon-container {
-	width: 32px;
-	height: 32px;
-	border-radius: 3px;
-	color: #ffffff;
-	line-height: 32px;
-	margin-right: 15px;
-	margin-top: 8px;
-}
-
-.feature-list-1 li p {
-	color: rgba(255, 255, 255, 0.8);
-	font-size: 18px;
-	line-height: 30px;
-}
-
-
-/*---------------------------------------
-   VERTICAL REGISTRATION FORM               
------------------------------------------*/
-.vertical-registration-form {
-	background: rgba(0, 0, 0, 0.5);
-	padding-left: 30px;
-	padding-right: 30px;
-	width: 100%;
-	max-width: 390px;
-	margin: auto;
-	padding-bottom: 30px;
-}
-
-.vertical-registration-form .colored-line {
-	margin-top: 0;
-}
-
-.vertical-registration-form h3 {
-	color: #ffffff;
-	text-transform: uppercase;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.vertical-registration-form .input-box {
-	width: 100%;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	height: 45px;
-	background: #000000;
-	border-radius: 3px;
-	font-size: 16px;
-	color: rgba(255, 255, 255, 0.5);
-	box-shadow: inherit;
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-}
-
-.vertical-registration-form .input-box:focus,
-.vertical-registration-form .input-box:active {
-	box-shadow: inherit;
-	color: #ffffff;
-}
-
-
-/*---------------------------------------
-   SECTION WITH LEFT / RIGHT SCREENSHOT             
+   4.3.1 BASIC STYLES               
 -----------------------------------------*/
 .side-screenshot,
 .side-screenshot2 {
@@ -442,6 +469,10 @@ header .vertical-registration-form {
 .brief p {
 	margin-top: 45px;
 }
+
+/*---------------------------------------
+   4.3.2 FEATURE LIST               
+-----------------------------------------*/
 
 .feature-list-2 {
 	margin-top: 25px;
@@ -473,9 +504,9 @@ header .vertical-registration-form {
 }
 
 
-/*---------------------------------------
-   FEATURES SECTION            
------------------------------------------*/
+/*========================================
+   4.4 SECTION: FEATURES                
+==========================================*/
 .features {
 	margin-top: 35px;
 }
@@ -495,9 +526,9 @@ header .vertical-registration-form {
 }
 
 
-/*---------------------------------------
-   PACKAGES SECTION            
------------------------------------------*/
+/*========================================
+   4.5 SECTION: PRICING TABLE               
+==========================================*/
 .pricing-table {
 	margin-top: 35px;
 }
@@ -572,8 +603,11 @@ header .vertical-registration-form {
 }
 
 
+/*========================================
+   4.6 SECTION: VIDEO              
+==========================================*/
 /*---------------------------------------
-   VIDEO SECTION            
+   4.6.1 BASIC STYLE / RESET         
 -----------------------------------------*/
 video {
 	max-width: 100%;
@@ -598,7 +632,7 @@ object {
 
 
 /*---------------------------------------
-   VIDEO SECTION FEATURES          
+   4.6.2 VIDEO FEATURES         
 -----------------------------------------*/
 .video-features {
 	margin-top: 40px;
@@ -609,9 +643,9 @@ object {
 }
 
 
-/*---------------------------------------
-   SCREENSHOT SECTION          
------------------------------------------*/
+/*========================================
+   4.7 SECTION: SCREENSHOTS              
+==========================================*/
 .screenshots {
 	margin-top: 68px;
 }
@@ -633,8 +667,11 @@ object {
 }
 
 
+/*========================================
+   4.8 SECTION: CLIENTS AND FEEDBACKS              
+==========================================*/
 /*---------------------------------------
-   CLIENTS / TESTIMONIALS SECTION          
+   4.8.1 CLIENTS LOGO        
 -----------------------------------------*/
 .clients {
 	margin-top: 35px;
@@ -645,6 +682,10 @@ object {
 	vertical-align: middle;
 	margin: 15px;
 }
+
+/*---------------------------------------
+   4.8.2 FEEDBACKS        
+-----------------------------------------*/
 
 .testimonials {
 	margin-top: 15px;
@@ -726,8 +767,11 @@ object {
 }
 
 
+/*========================================
+   4.9 SECTION: CALL TO ACTION              
+==========================================*/
 /*---------------------------------------
-   CALL TO ACTION SECTION          
+   4.9.1 CALL TO ACTION WITH TEXT/BUTTON          
 -----------------------------------------*/
 .cta-section {
 	background: url(../images/bg-image-2.jpg) no-repeat center fixed;
@@ -757,7 +801,7 @@ object {
 
 
 /*---------------------------------------
-   SUBSCRIBE FORM           
+   4.9.2 SUBSCRIBE FORM           
 -----------------------------------------*/
 .subscribe-section {
 	margin-top: 75px;
@@ -779,8 +823,12 @@ object {
     color: #FFFFFF;
 }
 
+
+/*========================================
+   4.10 SECTION: CONTACT US             
+==========================================*/
 /*---------------------------------------
-   CONTACT US SECTION         
+   4.10.1 BASIC STYLES        
 -----------------------------------------*/
 .contact-us {
 	padding-top: 75px;
@@ -808,7 +856,7 @@ object {
 
 
 /*---------------------------------------
-   CONTACT FORM             
+   4.10.2 CONTACT FORM        
 -----------------------------------------*/
 .contact-form {
 	margin-top: 25px;
@@ -856,9 +904,9 @@ object {
 }
 
 
-/*---------------------------------------
-   FOOTER SECTION          
------------------------------------------*/
+/*========================================
+   4.11 SECTION: FOOTER             
+==========================================*/
 footer {
 	padding-top: 75px;
 	padding-bottom: 75px;
